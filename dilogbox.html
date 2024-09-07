@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>
+
+        </title>
+        <style>
+            #div1{
+                display: none;
+
+                position: fixed;
+                top:0;
+                left:0;
+                height: 100%;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.3);
+                justify-content: center;
+                align-items: center;
+                
+            }
+            #box{
+                background-color:  #f9f9f9;
+                border: 2px double blue ;
+                padding: 10px;
+                color:red;
+                width:20%;
+                height: auto;
+                text-align: center;
+                align-items: center;
+            }
+            #cl{
+                cursor: pointer;
+                text-align: right;
+                color: black;
+                top:0;
+                margin: auto;
+                font-weight: bolder;
+                }
+        </style>
+    </head>
+    <body>
+        <button id="op">click</button>
+        <div id="div1">
+            <div id="box">
+            <p id="cl" onClick="close()">X</p>
+                <h4>box data </h4>
+            </div>
+        </div>
+    </body>
+<script>
+    op=document.getElementById('op');
+    cl=document.getElementById('cl');
+    op.addEventListener('click',function(){
+        document.getElementById('div1').style.display='flex';
+    })
+    cl.addEventListener('click',function(){
+        document.getElementById('div1').style.display='none';
+    })
+    function close(){
+    document.getElementById('div1').style.display='none';
+}
+
+</script>
+
+</html>
